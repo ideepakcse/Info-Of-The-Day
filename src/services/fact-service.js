@@ -41,13 +41,13 @@ class FactService {
         }
     }
 
-    async sendEmail(mailFrom, mailTo, subject, text) {
+    async sendEmail(mailFrom, mailTo, subject, data) {
         try {
             const response = await Mailer.sendMail({
                 from: mailFrom,
                 to: mailTo,
                 subject: subject,
-                text: text
+                html: data
             });
             return response;
         } catch(error) {

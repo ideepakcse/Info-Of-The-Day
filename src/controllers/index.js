@@ -1,3 +1,4 @@
 module.exports = {
-    FactController : require('./fact-controller')
+    FactController : require('./fact-controller'),
+    UserController  : require('./user-controller'),
 }
