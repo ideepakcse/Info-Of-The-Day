@@ -18,7 +18,7 @@ const mail={
 var ind = 0;
 
 function scheduleCrons() {
-    cron.schedule('*/1 * * * *', async () => {
+    cron.schedule('0 6 * * *', async () => { //cron for every morning 06:00 AM
         const facts = await factService.getAll();
         const currFact = facts[ind];
         console.log(currFact);
